@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>登录</title>
+    </h:head>
+    <h:body>
+        <h:form id="login">
+            <p>用户名：<h:inputText id="username"
+                title="用户名"
+                value="#{user.username}"
+                required="true"
+                requiredMessage="请输入正确的用户名！"
+                maxlength="25" />
+            </p> 
+            <p>密码：<h:inputSecret id="password" value="#{user.password}" /></p>
+            <h:commandButton id="submit" value="登录" action="#{user.login}" />
+            <h:commandButton id="reset" value="取消" type="reset"/>
+            <p><a href="register.xhtml">注册</a> <a href="index.xhtml">返回主页</a></p>
+        </h:form>
+        <h:message showSummary="true" showDetail="false"
+                       style="color: #d20005;
+                       font-style: oblique;
+                       text-decoration: overline"
+                       id="errors1"
+                       for="username" />
+    </h:body>
+</html>
+

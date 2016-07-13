@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>云朵软件服务平台</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="js/jquery-3.0.0.min.js" type="text/javascript" />
+        <script src="http://do.yunzhijia.com/pub/js/qingjs.js"  type="text/javascript" />
+        
+        <h:outputStylesheet library="css" name="index.css"/>
+    </h:head>
+    <h:body>
+        <div id="top">
+            <h:graphicImage id="logo" value="#{resource['images:logo.png']}" 
+                        alt="云朵信息化"/>
+        </div>
+        <div id="left">
+            <h:form>
+            <p:growl id="messages" showDetail="true"/>
+            <p:commandButton id="menuButton" value="菜单" type="button" icon="ui-icon-extlink"/>
+            <p:slideMenu id="menu" overlay="true" trigger="menuButton" my="left top" at="left bottom">
+                <p:submenu label="测试" icon="ui-icon-extlink">
+                    <p:menuitem value="语言环境" url="template/language.xhtml"/>
+                    <p:menuitem value="此文关于使用CSS设置对象字体样式篇。从html的字体到css字体使用CSS教程。" url="../language.xhtml"/>
+                </p:submenu>
+                <p:submenu label="客户管理">
+                    <p:menuitem value="客户" actionListener="#{menu.save}" update="messages" icon="ui-icon-disk"/>
+                    <p:menuitem value="联系人" actionListener="#{menu.update}" update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+                </p:submenu>
+                <p:submenu label="服务管理">
+                    <p:menuitem value="合同录入" actionListener="#{menu.delete}"  ajax="false" icon="ui-icon-close"/>
+                    <p:submenu label="合同查询">
+                        
+                    </p:submenu>
+                    <p:menuitem value="服务记录" />
+                </p:submenu>
+                <p:submenu label="任务管理" icon="ui-icon-extlink">
+                    <p:submenu label="Prime Links">
+                        <p:menuitem value="Prime" url="http://www.prime.com.tr" />
+                        <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />
+                    </p:submenu>
+                </p:submenu>
+                <p:submenu label="用户管理" icon="ui-icon-extlink">
+                    <p:menuitem value="维护" url="http://www.primefaces.org" />
+                </p:submenu>
+            </p:slideMenu>
+        </h:form>
+        </div>
+        <div id="center">
+            
+        </div>
+        <div id="right"></div>
+        <div id="bottom">
+        </div>
+        
+        
+    </h:body>
+</html>
+

@@ -1,0 +1,98 @@
+
+html,body,div,ul,li,h3,p,a{
+        margin:0; 
+        padding:0;
+}
+body{
+        line-height: 1.6;
+}
+ul{
+        list-style: none;
+}
+a{
+        text-decoration: none;
+}
+.yzjapi-list{
+        width: 100%;
+        background-color: #fff;
+}
+.api-item{
+        padding-left: 15px;
+}
+.api-item a{
+        display: block;
+        color: #3e3e3e;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.api-item-inner{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        min-height: 24px;
+        position: relative;
+}
+.api-item-inner:before{
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200%;
+        height: 1px;
+        border-top: 1px solid #ededed;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        top: auto;
+        bottom: -2px;
+}
+h3{
+        padding-top: 16px;
+        margin-top: 25px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #3e3e3e;
+        position: relative;
+}
+h3:first-child{
+    padding-top: 15px;
+}
+.desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2em;
+    color: #8d8c92;
+}
+.btn{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 14px;
+        padding-right: 14px;
+        font-size: 18px;
+        text-align: center;
+        text-decoration: none;
+        overflow: visible;
+        height: 42px;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        color: #ffffff;
+        line-height: 42px;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        background-color: #3cbaff;
+}
+button.btn {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+}
+.yzjapi-test{
+        background-color: #ffffff;
+    padding: 0 15px;
+    margin-top: 30px;
+    padding-bottom: 15px;
+}

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form enctype="multipart/form-data">
+                <h:inputText value="#{yzjOAuth.eid}" />
+                <h:inputFile value="#{yzjOAuth.key}"
+                             />
+                <h:commandButton value="提交" action="#{yzjOAuth.uploadKey()}">
+                    <!--<f:ajax execute="file" render="@all"/>-->
+                </h:commandButton>
+            </h:form>
+        <h:form>
+            <h:inputText value="#{yzjOAuth.fullname}" />
+            <h:commandButton value="提交" />
+        </h:form>
+        <f:view>
+            <h:form>
+                <h1><h:outputText value="#{yzjOAuth.eid}"/></h1>
+                <p:dataTable value="#{yzjOAuth.departments}" var="item">
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Name"/>
+                        </f:facet>
+                        <h:outputText value="#{item.name}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Uid"/>
+                        </f:facet>
+                        <h:outputText value="#{item.uid}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="FullName"/>
+                        </f:facet>
+                        <h:outputText value="#{item.fullname}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Id"/>
+                        </f:facet>
+                        <h:outputText value="#{item.id}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Parent"/>
+                        </f:facet>
+                        <h:outputText value="#{item.parent}"/>
+                    </p:column>
+                </p:dataTable>
+            </h:form>
+        </f:view>
+    </h:body>
+</html>
+
+

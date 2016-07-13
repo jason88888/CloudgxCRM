@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>隐藏式菜单</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:growl id="messages" showDetail="true"/>
+            <p:commandButton id="dynaButton" value="显示菜单" type="button" icon="ui-icon-extlink"/>
+            <p:slideMenu overlay="true" trigger="dynaButton" my="left top" at="left bottom" style="width:20%">
+                <p:submenu label="测试" icon="ui-icon-extlink">
+                    <p:menuitem value="语言环境" url="../language.xhtml"/>
+                </p:submenu>
+                <p:submenu label="客户管理">
+                    <p:menuitem value="客户" actionListener="#{menu.save}" update="messages" icon="ui-icon-disk"/>
+                    <p:menuitem value="联系人" actionListener="#{menu.update}" update="messages" icon="ui-icon-arrowrefresh-1-w"/>
+                </p:submenu>
+                <p:submenu label="服务管理">
+                    <p:menuitem value="合同录入" actionListener="#{menu.delete}"  ajax="false" icon="ui-icon-close"/>
+                    <p:submenu label="合同查询">
+                        
+                    </p:submenu>
+                    <p:menuitem value="服务记录" />
+                </p:submenu>
+                <p:submenu label="任务管理" icon="ui-icon-extlink">
+                    <p:submenu label="Prime Links">
+                        <p:menuitem value="Prime" url="http://www.prime.com.tr" />
+                        <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />
+                    </p:submenu>
+                </p:submenu>
+                <p:submenu label="用户管理" icon="ui-icon-extlink">
+                    <p:menuitem value="维护" url="http://www.primefaces.org" />
+                </p:submenu>
+            </p:slideMenu>
+        </h:form>
+    </h:body>
+</html>
+

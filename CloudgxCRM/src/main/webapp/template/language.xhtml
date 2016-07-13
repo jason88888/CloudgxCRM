@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <div id="lan">
+            <f:view locale="#{language.locale}">
+                <h:form>
+                    <span>多语言测试：</span>
+                    <h:messages globalOnly="true" errorClass="err" />
+                    <f:loadBundle var="msg" basename="messages.消息" />
+                    切换语言：<h:commandLink action="#{language.changeLocale('zh_CN')}" value="中文" />
+                        &nbsp;<h:commandLink action="#{language.changeLocale('en_US')}" value="English" />
+                    <p />
+                    当前语言：<h:outputText value="#{msg.语言}" />
+                </h:form>
+            </f:view>
+        </div>
+    </h:body>
+</html>
+
