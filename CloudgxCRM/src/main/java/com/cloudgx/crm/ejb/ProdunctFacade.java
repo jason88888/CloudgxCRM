@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cloudgx.crm.entity;
+package com.cloudgx.crm.ejb;
 
+import com.cloudgx.crm.entity.Produnct;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -14,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author moon
  */
 @Stateless
-public class LinkmanFacade extends AbstractFacade<Linkman> {
+public class ProdunctFacade extends AbstractFacade<Produnct> {
 
     @PersistenceContext(unitName = "com.cloudgx_CloudgxCRM_war_1.0-SNAPSHOTPU")
     private EntityManager em;
@@ -24,8 +25,8 @@ public class LinkmanFacade extends AbstractFacade<Linkman> {
         return em;
     }
 
-    public LinkmanFacade() {
-        super(Linkman.class);
+    public ProdunctFacade() {
+        super(Produnct.class);
     }
     
 }

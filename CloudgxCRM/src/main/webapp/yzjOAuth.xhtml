@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>云之家组织人员同步</title>
+    </h:head>
+    <h:body>
+        <h:form enctype="multipart/form-data">
+            <h:panelGrid columns="2">
+                云之家组织EID：<h:inputText value="#{yzjOAuth.eid}" />
+                云之家组织Key：<h:inputFile value="#{yzjOAuth.key}" />
+                <h:commandButton value="提交" action="#{yzjOAuth.uploadKey()}" />
+                <h:commandButton value="取消" />
+                EID：<h:outputText value="#{yzjOAuth.eid}" />
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

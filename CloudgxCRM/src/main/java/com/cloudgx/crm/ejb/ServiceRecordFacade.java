@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cloudgx.crm.entity;
+package com.cloudgx.crm.ejb;
 
+import com.cloudgx.crm.entity.ServiceRecord;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

@@ -5,24 +5,12 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Facelet Title</title>
+        <title>人员组织列表</title>
     </h:head>
     <h:body>
-        <h:form enctype="multipart/form-data">
-                <h:inputText value="#{yzjOAuth.eid}" />
-                <h:inputFile value="#{yzjOAuth.key}"
-                             />
-                <h:commandButton value="提交" action="#{yzjOAuth.uploadKey()}">
-                    <!--<f:ajax execute="file" render="@all"/>-->
-                </h:commandButton>
-            </h:form>
-        <h:form>
-            <h:inputText value="#{yzjOAuth.fullname}" />
-            <h:commandButton value="提交" />
-        </h:form>
         <f:view>
             <h:form>
-                <h1><h:outputText value="#{yzjOAuth.eid}"/></h1>
+                <h1>组织ID：<h:outputText value="#{yzjOAuth.eid}"/></h1>
                 <p:dataTable value="#{yzjOAuth.departments}" var="item">
                     <p:column>
                         <f:facet name="header">

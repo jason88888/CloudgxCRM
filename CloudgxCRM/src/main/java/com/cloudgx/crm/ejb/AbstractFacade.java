@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.cloudgx.crm.entity;
+package com.cloudgx.crm.ejb;
 
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -66,7 +66,7 @@ public abstract class AbstractFacade<T> {
         javax.persistence.Query q = getEntityManager().createQuery(cq);
         return ((Long) q.getSingleResult()).intValue();
     }
-    
+        
 //    public T findByKey(String keyName,String KeyValue) {
 //        CriteriaBuilder cb = getEntityManager().getCriteriaBuilder();
 //        CriteriaQuery<T> cq = cb.createQuery(entityClass);
